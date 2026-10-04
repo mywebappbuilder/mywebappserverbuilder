@@ -18,9 +18,7 @@ if [[ -d src/ ]]; then
  
   fi
 
-  version=$(grep -oPm1 "(?<=<version>)[^<]+" pom.xml)
-
-  jar cf dst/lib/mywebappserver-"$version".jar -C dst/lib/ com/
+  jar cf dst/lib/mywebappserver-1.0.0.jar -C dst/lib/ com/
 
   rm -r dst/lib/com/
 
