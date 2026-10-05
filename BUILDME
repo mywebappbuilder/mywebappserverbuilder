@@ -18,7 +18,9 @@ if [[ -d src/ ]]; then
  
   fi
 
-  jar cf dst/lib/mywebappserver.jar -C dst/lib/ com/
+  version=$(grep -e "<version>.*</version>" -m 1 -o pom.xml | sed "s/<[^<>]*>//g")
+
+  jar cf dst/lib/mywebappserver-"$version".jar -C dst/lib/ com/
 
   rm -r dst/lib/com/
 
