@@ -14,7 +14,7 @@ if [[ -d src/ ]]; then
 
   else
 
-    javac src/com/mycompany/mywebappserver/DiscardServer.java -sourcepath src/ -cp "dst/lib/*" -d dst/lib/ -g
+    javac src/com/mycompany/mywebappserver/MyWebAppServer.java -sourcepath src/ -cp "dst/lib/*" -d dst/lib/ -g
  
   fi
 
@@ -22,7 +22,7 @@ if [[ -d src/ ]]; then
 
   jar cf dst/lib/mywebappserver-"$version".jar -C dst/lib/ com/
 
-  #rm -r dst/lib/com/
+  rm -r dst/lib/com/
 
 fi
 
